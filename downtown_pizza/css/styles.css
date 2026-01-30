@@ -14,11 +14,6 @@ main {
   .container {
     flex-direction: column; /* stack elements */
   }
-
-  .container form,
-  .container table {
-    width: 100%; /* full width */
-  }
 }
 /*
 /* Responsive breakpoint 
