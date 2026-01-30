@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reference: Conference Reg</title>
-  <link rel="stylesheet" href="conference_style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -18,10 +18,10 @@
         <legend>Customer Information</legend>
         <div class="form-grid">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required minlength="2">
+          <input type="text" id="name" name="name" placeholder = "Your Name" required minlength="2">
 
           <label for="address">Address:</label>
-          <input type="text">
+          <input type="text" placeholder = "Your address">
           <label for="phone">Phone:</label>
           <input type="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
         </div>
@@ -49,7 +49,7 @@
 
         <label>Quantity</label>
         <div class="flex-row">
-          <label><input type="number" id="quantity" required min="1" max="10">
+          <label><input type="number" id="quantity" placeholder="" required min="1" max="10">
         </div>
 
         </div>
@@ -62,7 +62,7 @@
           <textarea id="instructions" name="Delivery Instructions" rows="4" cols="30"></textarea><br><br>
         </div>
         <div>
-          <label>Preferred Delivery Date and Time: <input type="datetime-local" required></label><br><br>
+          <label>Preferred Delivery Date and Time: <input type="datetime-local" placeholder="yyyy-mm-dd"></label><br><br>
         </div>
         <div>
           <label>Payment method: <select id="payment" name="payment" required>
@@ -77,6 +77,46 @@
       <button type="submit" id = "submit">Submit</button>
       <button type="reset" id = "reset">Reset</button>
     </form>
+
+    <aside>
+    <table>
+        <caption>Order Summary</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Base pizza</td>
+                <td>Large (12"), Thin crust</td>
+                <td>$16.99</td>
+            </tr>
+
+            <tr>
+                <td>Toppings</td>
+                <td>Mushrooms, Olives, Extra cheese</td>
+                <td>$4.50</td>
+            </tr>
+
+            <tr>
+                <td>Delivery fee</td>
+                <td>Standard delivery</td>
+                <td>$3.99</td>
+            </tr>
+
+            <tr>
+                <td><strong>Total</strong></td>
+                <td></td>
+                <td><strong>$25.48</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</aside>
   </main>
 </body>
 

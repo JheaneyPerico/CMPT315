@@ -1,46 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reference: Conference Reg</title>
-  <link rel="stylesheet" href="conference_style.css">
-</head>
+body { font-family: sans-serif; background: #eee; padding: 20px; }
+.card { background: white; padding: 20px; max-width: none; margin: 0 auto; }
 
-<body>
-  <main class="card">
-    <h1>Reference: Conference Reg</h1>
-    <p>Analyze this code to help you build the Pizza Assignment.</p>
+fieldset { margin-bottom: 20px; border: 1px solid #ccc; }
 
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Attendee Info (Grid Layout)</legend>
-        <div class="form-grid">
-          <label for="email">Email (Required):</label>
-          <input type="email" id="email" required placeholder="test@test.com">
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* form 66%, aside 33% */
+    gap: 1.5rem;
+    padding: 1rem;
+}
 
-          <label for="web">Website (Pattern):</label>
-          <input
-            type="url"
-            id="web"
-            required
-            pattern="https://.+"
-            placeholder="Must start with https://">
-        </div>
-      </fieldset>
+/* Responsive breakpoint */
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+  label { text-align: left; }
+}
+/*
+.form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 60% 33% 
+  gap: 10px;
+  align-items: center;
+}
+  */
 
-      <fieldset>
-        <legend>Preferences (Flex Layout)</legend>
-        <label>Dietary Restrictions:</label>
-        <div class="flex-row">
-          <label><input type="checkbox"> Gluten Free</label>
-          <label><input type="checkbox"> Vegan</label>
-          <label><input type="checkbox"> Halal</label>
-        </div>
-      </fieldset>
+fieldset {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 0.75rem 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
 
-      <button type="submit">Register</button>
-    </form>
-  </main>
-</body>
-</html>
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+label { text-align: right; font-weight: bold; }
+
+.options {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Radios: single horizontal row */
+.options.radios {
+    flex-direction: row;
+}
+
+/* Checkboxes: wrap naturally */
+.options.checkboxes {
+    flex-wrap: wrap;
+}
+
+/* Fix label alignment inside options */
+.options label {
+    text-align: left;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Flex example */
+.flex-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* Valid fields */
+input:valid,
+select:valid,
+textarea:valid {
+    border: 2px solid green;
+}
+
+/* Invalid fields*/
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid,
+select:invalid {
+    border: 2px solid red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: #e6e6e6;
+}
