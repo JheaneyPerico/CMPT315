@@ -11,7 +11,7 @@ main {
 }
 
 @media (max-width: 600px) {
-  .container {
+  .table {
     flex-direction: column; /* stack elements */
   }
 }
