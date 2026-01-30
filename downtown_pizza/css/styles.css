@@ -11,10 +11,9 @@ main {
 }
 
 @media (max-width: 600px) {
-  .table {
-    flex-direction: column; /* stack elements */
+  main {
+    grid-template-columns: 1fr; /* single column */
   }
-}
 /*
 /* Responsive breakpoint 
 @media (max-width: 600px) {
